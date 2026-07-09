@@ -1,1 +1,21 @@
 {% extends 'base.html' %}
+
+{% block page_title %}
+{% endblock page_title %}
+
+
+{% block content %}
+    <nav>
+        <a href='{% url "home" %}'>خانه</a>
+        <a href='{% url "product-list" %}'>محصولات</a>
+        <a href='{% url "contact" %}'>تماس با ما</a>
+        <a href='{% url "about" %}'>درباره ما</a>
+        <a href=''>سبد خرید</a>
+        <a href='{% url "profile" %}'>پروفایل</a>
+    </nav>
+
+    <div>
+        
+    </div>
+{% endblock content %}
+    
