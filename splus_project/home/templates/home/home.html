@@ -1,21 +1,107 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block page_title %}
 {% endblock page_title %}
 
+{% block header_references %}
+    <link rel='stylesheet' href='{% static "home/css/home.css" %}'>
+{% endblock header_references %}
 
 {% block content %}
-    <nav>
-        <a href='{% url "home" %}'>خانه</a>
-        <a href='{% url "product-list" %}'>محصولات</a>
-        <a href='{% url "contact" %}'>تماس با ما</a>
-        <a href='{% url "about" %}'>درباره ما</a>
-        <a href=''>سبد خرید</a>
-        <a href='{% url "profile" %}'>پروفایل</a>
-    </nav>
+    <div class='navigation flex-center'>
+        <a class='no-background' href='{% url "home" %}'>خانه</a>
+        <a class='no-background' href='{% url "product-list" %}'>محصولات</a>
+        <a class='no-background' href='{% url "contact" %}'>تماس با ما</a>
+        <a class='no-background' href='{% url "about" %}'>درباره ما</a>
+        <a class='no-background' href=''>سبد خرید</a>
+        <a class='no-background' href='{% url "profile" %}'>پروفایل</a>
+    </div>
 
-    <div>
-        
+    <div class='inverted'>
+        <h2 class='best-selling-title flex-center no-background'> پرفروش ترین ساعت ها </h2>
+        <div class='best-selling flex-center no-background'>
+            <div class='product-box'>
+                <img class='product-img no-background' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
+            </div>
+            <div class='product-box'>
+                <img class='product-img no-background' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
+            </div>
+            <div class='product-box'>
+                <img class='product-img no-background' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
+            </div>
+        </div>
+    </div>
+
+    <div class='product-title-section flex-center no-background'>
+        <h2 class='product-title'> محصولات </h2>   
+    </div>
+    
+    <div class='product-section flex-center'>
+        <div class='product-element'>
+            <a class='no-background' href=''>
+                <p class='in-stock'> موجود </p>
+                <img class='product-img no-background' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
+                <h2 class='no-background'> سیکوپلاس مردانه استیل </h2>
+                <h3 class='no-background'> PH-130 </h3>
+            ۱۳.۱۵۰.۰۰۰ تومان
+            </a>
+        </div>
+        <div class='product-element'>
+            <a class='no-background' href=''>
+                <p class='out-of-stock'> ناموجود </p>
+                <img class='product-img no-background' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
+                <h2 class='no-background'> سیکوپلاس مردانه استیل </h2>
+                <h3 class='no-background'> PH-130 </h3>
+            ۱۱.۲۹۰.۰۰۰ تومان
+            </a>
+        </div>
+        <div class='product-element'>
+            <a class='no-background' href=''>
+                <p class='in-stock'> موجود </p>
+                <img class='product-img no-background' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
+                <h2 class='no-background'> سیکوپلاس مردانه استیل </h2>
+                <h3 class='no-background'> PH-130 </h3>
+            ۱۲.۵۹۰.۰۰۰ تومان
+            </a>
+        </div>
+        <div class='product-element'>
+            <a class='no-background' href=''>
+                <p class='in-stock'> موجود </p>
+                <img class='product-img no-background' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
+                <h2 class='no-background'> سیکوپلاس مردانه استیل </h2>
+                <h3 class='no-background'> PH-130 </h3>
+            ۱۱.۵۹۰.۰۰۰ تومان
+            </a>
+        </div>
+    </div>
+
+    <div class='all-product-btn-section flex-center no-background'>
+        <a class='all-product-btn' href='{% url "product-list" %}'> تمامی محصولات </a>
+    </div>
+
+    <div class='about-section'>
+        <h1 class='about-title no-background'>درباره سیکوپلاس</h1>
+        <p class='about-desc no-background'>در سیکو پلاس، ما به ارائه مجموعه‌ای استثنایی از ساعت‌های سیکو که ظرافت بی‌انتها را با مهندسی دقیق ترکیب می‌کنند، متعهد هستیم. مجموعه ما از طرح‌های کلاسیک تا جدیدترین نوآوری‌ها را شامل می‌شود و تضمین می‌کند که هر علاقه‌مند به ساعت می‌تواند ساعت ایده‌آل خود را پیدا کند. ما نه تنها به ارائه محصولات، بلکه به ارائه تجربه، با خدمات شخصی‌سازی شده و مشاوره تخصصی برای راهنمایی شما در انتخاب ساعت مناسب اعتقاد داریم. هر ساعت سیکو در فروشگاه ما گواهی بر میراث کیفیت و مهارت این برند است. با سیکو پلاس، ساعت بی‌نظیری را کشف کنید که در هر لحظه از زندگی شما را همراهی کند.</p>
+        <div class='socials no-background'>
+            <div class='about-link no-background'>
+                <a class='no-background' href=''>info@seikopluswatch.com</a>
+            </div>
+            <div class='about-link no-background'>
+                <a class='no-background' href=''>Whatsapp: 099000000</a>
+            </div>
+            <div class='about-link no-background'>
+                <a class='no-background' href=''>Telegram: 0999292392</a>
+            </div>
+            <div class='about-link no-background'>
+                <a class='no-background' href=''>Instagram: seikoplus_official</a>
+            </div>
+        </div>
     </div>
 {% endblock content %}
+
+
+
+{% block footer-references %}
+{% endblock footer-references %}
     

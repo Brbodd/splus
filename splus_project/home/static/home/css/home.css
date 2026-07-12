@@ -1,0 +1,306 @@
+@font-face {
+    font-family: 'Doran';
+    src: url('../../fonts/Doran-Light.eot');
+    src: local('Doran Light'), local('Doran-Light'),
+        url('../../fonts/Doran-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Doran-Light.woff2') format('woff2'),
+        url('../../fonts/Doran-Light.woff') format('woff'),
+        url('../../fonts/Doran-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Doran';
+    src: url('../../fonts/Doran-Thin.eot');
+    src: local('Doran Thin'), local('Doran-Thin'),
+        url('../../fonts/Doran-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Doran-Thin.woff2') format('woff2'),
+        url('../../fonts/Doran-Thin.woff') format('woff'),
+        url('../../fonts/Doran-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Doran';
+    src: url('../../fonts/Doran-Medium.eot');
+    src: local('Doran Medium'), local('Doran-Medium'),
+        url('../../fonts/Doran-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Doran-Medium.woff2') format('woff2'),
+        url('../../fonts/Doran-Medium.woff') format('woff'),
+        url('../../fonts/Doran-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Doran';
+    src: url('../../fonts/Doran-Bold.eot');
+    src: local('Doran Bold'), local('Doran-Bold'),
+        url('../../fonts/Doran-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Doran-Bold.woff2') format('woff2'),
+        url('../../fonts/Doran-Bold.woff') format('woff'),
+        url('../../fonts/Doran-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Doran';
+    src: url('../../fonts/Doran-Regular.eot');
+    src: local('Doran Regular'), local('Doran-Regular'),
+        url('../../fonts/Doran-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Doran-Regular.woff2') format('woff2'),
+        url('../../fonts/Doran-Regular.woff') format('woff'),
+        url('../../fonts/Doran-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Doran';
+    src: url('../../fonts/Doran-ExtraBold.eot');
+    src: local('Doran ExtraBold'), local('Doran-ExtraBold'),
+        url('../../fonts/Doran-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Doran-ExtraBold.woff2') format('woff2'),
+        url('../../fonts/Doran-ExtraBold.woff') format('woff'),
+        url('../../fonts/Doran-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-background {
+    background-color: transparent;
+}
+/* 
+.glass {
+    background-color: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+} */
+
+.navigation {
+    background: var(--black);
+    border-bottom: 2px solid var(--black);
+}
+
+.navigation a {
+    font-family: 'Doran';
+    font-weight: bold;
+    color: white;
+    font-size: 1.6em;
+    text-decoration: none;
+    margin: 8px;
+    margin-block: 1.5rem;
+    border-bottom: 2px solid transparent;
+}
+
+.navigation a:hover {
+    border-bottom: 2px solid var(--black);
+}
+
+.inverted {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block: 25px;
+	clip-path: path("M50,0H750A50,50 0,0,1 800,50V425A25,25 0,0,1 775,450H775A25,25 0,0,0 750,475V475A25,25 0,0,1 725,500H50A50,50 0,0,1 0,450V50A50,50 0,0,1 50,0Z");
+	width: 800px;
+	height: 500px;
+	background-color: black;
+	aspect-ratio: 8 / 5;
+}
+
+.best-selling-title {
+    font-family: Doran;
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    padding-top: 5%;
+}
+
+.product-box {
+    box-shadow: 5px 5px 0 rgb(167, 166, 166);
+    border: 2px solid gray;
+    border-radius: 35px;
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+}
+
+.product-img {
+    padding-top: 22%;
+}
+
+.product-title-section {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.product-title {
+    font-family: Doran;
+    font-weight: 700;
+    font-size: 2rem;
+    display: inline-block;
+    color: white;
+    background-color: rgba(0, 77, 22, 0.7);
+    border-top: 8px solid rgb(0, 49, 0);
+    border-bottom: 8px solid rgb(0, 49, 0);
+    padding: 8px;
+}
+
+.product-section {
+    background-color: black;
+    height: 40vh;
+    margin-block: 4%;
+}
+
+.product-element {
+    position: relative;
+    background-color: white;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 25px;
+    width: 220px;
+    height: 400px;
+    margin: 15px;
+    box-shadow: 10px 10px 0 rgb(0, 0, 0);
+}
+
+.in-stock, .out-of-stock {
+    margin-block: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.in-stock {
+    background-color: #28a745;
+    font-size: 1rem;
+    padding: 4px;
+    border-radius: 30px;
+}
+
+.out-of-stock {
+    background-color: #dc3545;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.product-element img {
+    border-bottom: 10px solid black;
+    width: 100%;
+    height: 68%;
+    padding-top: 0;
+}
+
+.product-element a {
+    font-family: Doran;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.product-element:hover {
+    border: 2px solid rgb(0, 49, 0);
+    box-shadow: 0 0 10px 10px rgb(0, 49, 0);
+}
+
+.product-element h2 {
+    font-family: Doran;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.product-element h3 {
+    font-family: monospace;
+    text-align: right;
+    margin-right: 7%;
+    font-size: 1rem;
+    color: gray;
+    margin-top: 0;
+}
+
+.all-product-btn {
+    font-family: Doran;
+    font-weight: 400;
+    font-size: 2rem;
+    color: white;
+    background-color: black;
+    border-radius: 6px;
+    transition: 1s linear;
+    margin: 20px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.all-product-btn:hover {
+    color: black;
+    background-color: white;
+    transition: 1s color;
+}
+
+.about-section {
+    background-color: black;
+}
+
+.about-desc {
+    font-family: Doran;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    border-right: 10px solid red;
+}
+
+.about-title {
+    font-family: Doran;
+    font-weight: 900;
+    color: var(--white);
+    margin-right: 50px;
+    padding-top: 20px;
+}
+
+.socials {
+    text-align: center;
+}
+
+.about-link {
+    margin: 2%;
+}
+
+.about-link a {
+    font-family: var(--white);
+    font-family: Doran;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
