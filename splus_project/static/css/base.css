@@ -22,7 +22,7 @@ button, input, select, textarea {
 }
 
 body {
+    background-color: #E5E5F7;
     opacity: 0.8;
-    background-image: radial-gradient(white 1px, gray 1px);
-    background-size: 10px 10px;
+    background-image:  repeating-radial-gradient( circle at -5% 38%, transparent 0, #3e3e3e 18px ), repeating-linear-gradient(#727272);
 }
