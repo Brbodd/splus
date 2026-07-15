@@ -2,6 +2,7 @@
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
     --gray: rgb(128, 128, 128);
+    --darkgray: rgb(42, 42, 42);
 }
 
 .flex-center {
@@ -16,7 +17,7 @@
 
 .navigation {
     top: 0;
-    background: var(--black);
+    background: var(--darkgray);
     height: 80px;
 }
 
@@ -34,12 +35,12 @@
 .empty-space {
     color: var(--black);
     width: 50rem;
-    border-bottom: 2px solid var(--gray);
+    border-bottom: 2px solid var(--white);
 }
 
 
 .best-selling-section {
-    background-color: var(--black);
+    background-color: var(--darkgray);
     height: 400px;
     border-top: 0;
     border-radius: 0 0 120% 0;
