@@ -1,0 +1,26 @@
+{% load static %}
+
+<link rel="stylesheet" href='{% static "includes/navigation.css" %}'>
+
+<div class='navigation flex-center'>
+    <div class='no-background'>
+        <a class='nav-item no-background' href='{% url "home" %}'>خانه</a>
+    </div>
+    <div class='no-background'>
+        <a class='nav-item no-background' href='{% url "product-list" %}'>محصولات</a>
+    </div>
+    <div class='no-background'>
+        <a class='nav-item no-background' href='{% url "contact" %}'>تماس با ما</a>
+    </div>
+    <div class='no-background'>
+        <a class='nav-item no-background' href='{% url "about" %}'>درباره ما</a>
+    </div>
+    <div class='empty-space no-background'>
+    </div>
+    <div class='no-background'>
+        <a class='no-background' href=''>سبد خرید</a>
+    </div>
+    <div class='no-background'>
+        <a class='no-background' href='{% url "profile" %}'>پروفایل</a>
+    </div>
+</div>
