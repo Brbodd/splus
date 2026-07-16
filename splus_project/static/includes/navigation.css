@@ -38,10 +38,19 @@
     border-bottom: 2px solid var(--white);
 }
 
-
 .best-selling-section {
     background-color: var(--darkgray);
     height: 400px;
     border-top: 0;
     border-radius: 0 0 120% 0;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        text-align: center;
+    }
+
+    .navigation a {
+        font-size: 1em;
+    }
 }
