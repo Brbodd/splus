@@ -9,9 +9,26 @@
     {% include 'includes/navigation.html' %}
         
 
-    <div>
-        {% include "includes/in-stock-product.html" %}
-        {% include "includes/out-stock-product.html" %}
-    </div>    
+    <div class='main-section'>
+        <div class='category'>
+        <div>
+        <div class='product-section'>
+            <div class='flex-center'>
+                {% include "includes/in-stock-product.html" %}
+                {% include "includes/out-stock-product.html" %}
+                {% include "includes/in-stock-product.html" %}
+            </div>
+            <div class='flex-center'>
+                {% include "includes/in-stock-product.html" %}
+                {% include "includes/in-stock-product.html" %}
+                {% include "includes/out-stock-product.html" %}
+            </div>
+            <div class='flex-center'>
+                {% include "includes/out-stock-product.html" %}
+                {% include "includes/in-stock-product.html" %}
+                {% include "includes/in-stock-product.html" %}
+            </div>
+        </div>
+    </div>
 
 {% endblock content %}
