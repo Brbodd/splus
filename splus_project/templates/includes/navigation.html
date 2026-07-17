@@ -1,7 +1,12 @@
+{% extends "base.html" %}
 {% load static %}
 
-<link rel="stylesheet" href='{% static "includes/navigation.css" %}'>
 
+{% block header_references %}
+<link rel="stylesheet" href='{% static "includes/navigation.css" %}'>
+{% endblock header_references %}
+
+{% block content %}
 <div class='navigation flex-center'>
     <div class='no-background'>
         <a class='nav-item no-background' href='{% url "home" %}'>خانه</a>
@@ -24,3 +29,4 @@
         <a class='no-background' href='{% url "profile" %}'>پروفایل</a>
     </div>
 </div>
+{% endblock content %}

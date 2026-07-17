@@ -1,6 +1,17 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block header_references %}
+    <link rel='stylesheet' href='{% static "products/css/product_list.css" %}'>
+{% endblock header_references %}
 
 {% block content %}
     {% include 'includes/navigation.html' %}
+        
+
+    <div>
+        {% include "includes/in-stock-product.html" %}
+        {% include "includes/out-stock-product.html" %}
+    </div>    
 
 {% endblock content %}

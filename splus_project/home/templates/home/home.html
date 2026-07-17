@@ -12,7 +12,7 @@
     
     {% include 'includes/navigation.html' %}
 
-    <div class='best-selling-section no-background flex-center center-div'>
+    <div class='best-selling-section flex-center center-div'>
         <img class='product-img-sample no-background' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
         <div class='center-div no-background'>
             <h2 class='best-selling-title flex-center no-background'> پرفروش ترین ساعت ها </h2>
@@ -41,42 +41,11 @@
     </div>
     
     <div class='product-section flex-center'>
-        <div class='product-element'>
-            <a class='no-background' href=''>
-                <p class='in-stock-tag'> موجود </p>
-                <img class='product-img img-shadow no-background center-div' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
-                <h2 class='no-background'> سیکوپلاس مردانه استیل </h2>
-                <h3 class='no-background'> PH-130 </h3>
-            ۱۳.۱۵۰.۰۰۰ تومان
-            </a>
-        </div>
-        <div class='product-element'>
-            <a class='out-product no-background' href=''>
-                <p class='out-of-stock-tag'> موجود </p>
-                <img class='product-img img-shadow no-background center-div' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
-                <h2 class='no-background'> سیکوپلاس مردانه استیل </h2>
-                <h3 class='no-background'> PH-130 </h3>
-            ۱۱.۲۹۰.۰۰۰ تومان
-            </a>
-        </div>
-        <div class='product-element'>
-            <a class='no-background' href=''>
-                <p class='in-stock-tag'> موجود </p>
-                <img class='product-img img-shadow no-background center-div' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
-                <h2 class='no-background'> سیکوپلاس مردانه استیل </h2>
-                <h3 class='no-background'> PH-130 </h3>
-            ۱۲.۵۹۰.۰۰۰ تومان
-            </a>
-        </div>
-        <div class='product-element'>
-            <a class='no-background' href=''>
-                <p class='in-stock-tag'> موجود </p>
-                <img class='product-img img-shadow no-background center-div' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png">
-                <h2 class='no-background'> سیکوپلاس مردانه استیل </h2>
-                <h3 class='no-background'> PH-130 </h3>
-            ۱۱.۵۹۰.۰۰۰ تومان
-            </a>
-        </div>
+        {% include "includes/in-stock-product.html" %}
+        {% include "includes/out-stock-product.html" %}
+        {% include "includes/in-stock-product.html" %}
+        {% include "includes/in-stock-product.html" %}
+        {% include "includes/out-stock-product.html" %}
     </div>
 
     <div class='all-product-btn-section flex-center no-background'>
