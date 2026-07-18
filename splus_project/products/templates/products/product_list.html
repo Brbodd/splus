@@ -8,6 +8,8 @@
 {% endblock header_references %}
 
 {% block content %}
+    <div class='svg1'>
+    </div>
     <div class='main-section flex-center'>
         
         <div class="category">
@@ -67,7 +69,11 @@
 
             <div class='products'>
                 {% for product in products %}
-                    {% include "includes/in-stock-product.html" with product=product %}
+                    {% if product.quantity > 0 %}
+                        {% include "includes/in-stock-product.html" with product=product %}
+                    {% else %}
+                        {% include "includes/out-stock-product.html" with product=product %}
+                    {% endif %}
                 {% empty %}
                     <p>محصولی یافت نشد.</p>
                 {% endfor %}
