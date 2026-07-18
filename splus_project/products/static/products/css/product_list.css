@@ -86,7 +86,7 @@
     margin: 20px auto;
     width: clamp(150px, 30vw, 350px);
     height: 3rem;
-    padding: 0 10px;
+    padding-right: 14.9%;
     border: 2px solid var(--white);
     border-radius: 30px;
     background-color: var(--darkgray);

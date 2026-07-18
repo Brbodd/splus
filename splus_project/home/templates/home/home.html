@@ -41,11 +41,13 @@
     </div>
     
     <div class='product-section flex-center'>
-        {% include "includes/in-stock-product.html" %}
-        {% include "includes/out-stock-product.html" %}
-        {% include "includes/in-stock-product.html" %}
-        {% include "includes/in-stock-product.html" %}
-        {% include "includes/out-stock-product.html" %}
+        {% for product in products %}
+            {% if product.quantity > 0 %}
+                {% include "includes/in-stock-product.html" with product=product %}
+            {% else %}
+                {% include "includes/out-stock-product.html" with product=product %}
+            {% endif %}
+        {% endfor %}
     </div>
 
     <div class='all-product-btn-section flex-center no-background'>

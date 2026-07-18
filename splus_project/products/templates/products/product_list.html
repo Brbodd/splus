@@ -9,6 +9,7 @@
 
 {% block content %}
     <div class='main-section flex-center'>
+        
         <div class="category">
             <form class="category-form" method="get">
                 <div class='flex-center'>
@@ -25,9 +26,7 @@
                         <input type="checkbox" name="type" value="set">
                         ست
                     </label>
-                <hr>
                 </div>
-                <hr>
                 <div class='flex-center'>
                     <h3 class='price-title'>قیمت</h3>
                     <div class='price-box'>
@@ -68,7 +67,7 @@
 
             <div class='products'>
                 {% for product in products %}
-                    {% include "includes/in-stock-product.html" %}
+                    {% include "includes/in-stock-product.html" with product=product %}
                 {% empty %}
                     <p>محصولی یافت نشد.</p>
                 {% endfor %}
