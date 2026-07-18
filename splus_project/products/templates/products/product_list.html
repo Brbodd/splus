@@ -9,26 +9,74 @@
     {% include 'includes/navigation.html' %}
         
 
-    <div class='main-section'>
-        <div class='category'>
-        <div>
-        <div class='product-section'>
-            <div class='flex-center'>
-                {% include "includes/in-stock-product.html" %}
-                {% include "includes/out-stock-product.html" %}
-                {% include "includes/in-stock-product.html" %}
-            </div>
-            <div class='flex-center'>
-                {% include "includes/in-stock-product.html" %}
-                {% include "includes/in-stock-product.html" %}
-                {% include "includes/out-stock-product.html" %}
-            </div>
-            <div class='flex-center'>
-                {% include "includes/out-stock-product.html" %}
-                {% include "includes/in-stock-product.html" %}
-                {% include "includes/in-stock-product.html" %}
-            </div>
+    <div class='main-section flex-center'>
+        <div class="category">
+            <form class="category-form" method="get">
+                <div class='flex-center'>
+                    <h3 class='type-title'>چه نوعی باشه؟</h3>
+                    <label class='check-box'>
+                        <input type="checkbox" name="brand" value="casio">
+                        مردانه
+                    </label>
+                    <label class='check-box'>
+                        <input type="checkbox" name="brand" value="seiko">
+                        زنانه
+                    </label>
+                    <label class='check-box'>
+                        <input type="checkbox" name="brand" value="citizen">
+                        ست
+                    </label>
+                <hr>
+                </div>
+                <hr>
+                <div class='flex-center'>
+                    <h3 class='price-title'>قیمت</h3>
+                    <div class='price-box'>
+                        <input
+                            type="number"
+                            name="min_price"
+                            class='price-input'
+                            placeholder="حداقل قیمت">
+                        <input
+                            type="number"
+                            name="max_price"
+                            class='price-input'
+                            placeholder="حداکثر قیمت">
+                    </div>
+                </div>
+                <hr>
+                <h3>موجودی</h3>
+                <label>
+                    <input type="checkbox" name="in_stock">
+                    فقط کالاهای موجود
+                </label>
+                <div class='flex-center'>
+                    <button class="filter-btn" type="submit">
+                        اعمال فیلتر
+                    </button>
+                </div>
+            </form>
         </div>
+
+        <section class='product-section'>
+
+            <select class="sort-list" name="sort">
+                <option value="">مرتب سازی</option>
+                <option value="cheap">ارزان‌ترین</option>
+                <option value="expensive">گران‌ترین</option>
+                <option value="newest">جدیدترین</option>
+            </select>
+
+            <div class='products'>
+{% comment %}                 
+                {% for product in products %}
+                    {% include "includes/in-stock-product.html" %}
+                {% empty %}
+                    <p>محصولی یافت نشد.</p>
+                {% endfor %} {% endcomment %}
+        
+            </div>
+        </section>
     </div>
 
 {% endblock content %}
