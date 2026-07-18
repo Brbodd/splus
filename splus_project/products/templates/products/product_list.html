@@ -3,27 +3,26 @@
 
 {% block header_references %}
     <link rel='stylesheet' href='{% static "products/css/product_list.css" %}'>
+    <link rel='stylesheet' href='{% static "includes/in-stock-product.css" %}'>
+    <link rel='stylesheet' href='{% static "includes/out-stock-product.css" %}'>
 {% endblock header_references %}
 
 {% block content %}
-    {% include 'includes/navigation.html' %}
-        
-
     <div class='main-section flex-center'>
         <div class="category">
             <form class="category-form" method="get">
                 <div class='flex-center'>
                     <h3 class='type-title'>چه نوعی باشه؟</h3>
                     <label class='check-box'>
-                        <input type="checkbox" name="brand" value="casio">
+                        <input type="checkbox" name="type" value="men">
                         مردانه
                     </label>
                     <label class='check-box'>
-                        <input type="checkbox" name="brand" value="seiko">
+                        <input type="checkbox" name="type" value="women">
                         زنانه
                     </label>
                     <label class='check-box'>
-                        <input type="checkbox" name="brand" value="citizen">
+                        <input type="checkbox" name="type" value="set">
                         ست
                     </label>
                 <hr>
@@ -68,13 +67,11 @@
             </select>
 
             <div class='products'>
-{% comment %}                 
                 {% for product in products %}
                     {% include "includes/in-stock-product.html" %}
                 {% empty %}
                     <p>محصولی یافت نشد.</p>
-                {% endfor %} {% endcomment %}
-        
+                {% endfor %}
             </div>
         </section>
     </div>
