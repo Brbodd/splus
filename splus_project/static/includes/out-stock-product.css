@@ -103,22 +103,3 @@
     color: white;
     font-weight: bold;
 }
-
-.out-of-stock-tag::before,
-.out-of-stock-tag::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -10%;
-    width: 120%;
-    height: 2px;
-    background: white;
-}
-
-.out-of-stock-tag::before {
-    transform: rotate(25deg);
-}
-
-.out-of-stock-tag::after {
-    transform: rotate(-25deg);
-}
