@@ -1,1 +1,80 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+{{ product.name }} {{ product.code }}
+{% endblock page_title %}
+
+
+{% block header_references %}
+    <link rel='stylesheet' href='{% static "products/css/product_detail.css" %}'>
+{% endblock header_references %}
+
+
+{% block content %}
+    <div class='main-section flex-center'>
+
+        <div class='image-section'>
+            <img src="{{ product.img }}">
+        </div>
+
+        <div class='product-info-section glass'>
+            <h1 class='product-info-title'> ویژگی ها </h1>
+            <div></div><div></div>
+            <div class='info-box'>
+                <h3 class='info-title'> فرم صفحه </h3>
+                <hr>
+                <h3 class='info-text'> استیل </h3>
+            </div>            
+
+            <div class='info-box'>
+                <h3 class='info-title'>  جنس بند </h3>
+                <hr>
+                <h3 class='info-text'> استیل ، فلز </h3>
+            </div>   
+
+            <div class='info-box'>
+                <h3 class='info-title'> جنس شیشه  </h3>
+                <hr>
+                <h3 class='info-text'>یاقوت</h3>
+            </div>            
+
+            <div class='info-box'>
+                <h3 class='info-title'> نوع قفل بند</h3>
+                <hr>
+                <h3 class='info-text'>تاشو با محافظ</h3>
+            </div>            
+
+            <div class='info-box'>
+                <h3 class='info-title'> جنس بدنه  </h3>
+                <hr>                
+                <h3 class='info-text'>استیل ، فلز</h3>
+            </div>            
+
+            <div class='info-box'>
+                <h3 class='info-title'> منبع انرژی</h3>
+                <hr>                
+                <h3 class='info-text'>حرکتی</h3>
+            </div>            
+
+            <div class='info-box'>
+                <h3 class='info-title'> استایل کاربری  </h3>
+                <hr>                
+                <h3 class='info-text'>روزمره ، لوکس ، فشن</h3>
+            </div>            
+
+            <div class='info-box'>
+                <h3 class='info-title'>  میزان مقاومت در برابر فشار آب </h3>
+                <hr>
+                <h3 class='info-text'>10ATM</h3>
+            </div>            
+
+            <div class='info-box'>
+                <h3 class='info-title'> قابلیت های تخصصی ساعت  </h3>
+                <hr>
+                <h3 class='info-text'>عقربه های شب تاب ، تاریخ</h3>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

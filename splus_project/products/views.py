@@ -10,42 +10,50 @@ def product_list(request):
          "name": "سیکو پلاس مردانه",
          "code": "PH-1051",
          "price": "۱۱.۲۹۰.۰۰۰",
-         "quantity": 0},
+         "quantity": 0,
+         "slug": "seiko__ph_1051"},
         {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
          "name": "سیکو پلاس زنانه",
          "code": "PH-1052",
          "price": "۱۲.۶۹۰.۰۰۰",
-         "quantity": 3},
+         "quantity": 3,
+         "slug": "seiko__ph_1052"},
         {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
          "name": "کاسیو پلاس مردانه",
          "code": "PH-1053",
          "price": "۱۰.۱۹۰.۰۰۰",
-         "quantity": 10},
+         "quantity": 10,
+         "slug": "casio__ph_1053"},
         {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
          "name": "سیکو پلاس مردانه",
          "code": "PH-1054",
          "price": "۱۵.۰۰۰.۰۰۰",
-         "quantity": 1},
+         "quantity": 1,
+         "slug": "seiko__ph_1054"},
         {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
          "name": "سیکو پلاس مردانه و زنانه",
          "code": "PH-1055",
          "price": "۹.۸۰۷.۰۰۰",
-         "quantity": 0},
+         "quantity": 0,
+         "slug": "seiko__ph_1055"},
         {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
          "name": "سیکو پلاس زنانه",
          "code": "PH-1056",
          "price": "۱۰.۸۰۷.۰۰۰",
-         "quantity": 3},        
+         "quantity": 3,
+         "slug": "seiko__ph_1056"},        
          {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
          "name": "سیکو مردانه",
          "code": "PH-1058",
          "price": "۱۱.۰۰۰.۰۰۰",
-         "quantity": 7},        
+         "quantity": 7,
+         "slug": "seiko__ph_1058"},        
          {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
          "name": "سیکو پلاس مردانه و زنانه",
          "code": "PH-1059",
          "price": "۱۲.۲۳۰.۰۰۰",
-         "quantity": 5},         
+         "quantity": 5,
+         "slug": "seiko__ph_1059"},         
     ]
 
     # type = request.GET.getlist("type")
@@ -85,7 +93,87 @@ def product_list(request):
 
 
 def product_detail(request, slug):
-    return render(request, "products/product_detail.html")
+
+    '''
+    just write this lines after run DB
+    from django.shortcuts import get_object_or_404
+
+    product = get_object_or_404(Product, slug=slug)
+    '''
+
+    products = [
+        {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
+         "name": "سیکو پلاس مردانه",
+         "code": "PH-1051",
+         "price": "۱۱.۲۹۰.۰۰۰",
+         "quantity": 0,
+         "slug": "seiko__ph_1051"},
+        {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
+         "name": "سیکو پلاس زنانه",
+         "code": "PH-1052",
+         "price": "۱۲.۶۹۰.۰۰۰",
+         "quantity": 3,
+         "slug": "seiko__ph_1052"},
+        {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
+         "name": "کاسیو پلاس مردانه",
+         "code": "PH-1053",
+         "price": "۱۰.۱۹۰.۰۰۰",
+         "quantity": 10,
+         "slug": "casio__ph_1053"},
+        {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
+         "name": "سیکو پلاس مردانه",
+         "code": "PH-1054",
+         "price": "۱۵.۰۰۰.۰۰۰",
+         "quantity": 1,
+         "slug": "seiko__ph_1054"},
+        {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
+         "name": "سیکو پلاس مردانه و زنانه",
+         "code": "PH-1055",
+         "price": "۹.۸۰۷.۰۰۰",
+         "quantity": 0,
+         "slug": "seiko__ph_1055"},
+        {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
+         "name": "سیکو پلاس زنانه",
+         "code": "PH-1056",
+         "price": "۱۰.۸۰۷.۰۰۰",
+         "quantity": 3,
+         "slug": "seiko__ph_1056"},        
+         {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
+         "name": "سیکو مردانه",
+         "code": "PH-1058",
+         "price": "۱۱.۰۰۰.۰۰۰",
+         "quantity": 7,
+         "slug": "seiko__ph_1058"},        
+         {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
+         "name": "سیکو پلاس مردانه و زنانه",
+         "code": "PH-1059",
+         "price": "۱۲.۲۳۰.۰۰۰",
+         "quantity": 5,
+         "slug": "seiko__ph_1059"},         
+    ]
+
+    product = None
+
+    for item in products:
+        if item["slug"] == slug:
+            product = item
+            break
+
+    return render(
+        request,
+        "products/product_detail.html",
+        {
+            "product": product
+        }
+    )
+    
+    return render(
+        request,
+        "products/product_detail.html",
+        {
+            "products": products
+        }
+    )
 
 def category_products(request, slug):
     pass
