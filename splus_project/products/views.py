@@ -166,14 +166,6 @@ def product_detail(request, slug):
             "product": product
         }
     )
-    
-    return render(
-        request,
-        "products/product_detail.html",
-        {
-            "products": products
-        }
-    )
 
 def category_products(request, slug):
     pass
