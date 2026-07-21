@@ -22,6 +22,15 @@
     padding: 1%;
 }
 
+.circle {
+    position: absolute;
+    background-color: var(--darkgray);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    opacity: .5;
+    box-shadow: inset 0 0 100px 1px var(--black);
+}
+
 hr {
     color: var(--black);
 }
@@ -34,14 +43,22 @@ hr {
 }
 
 .svg2 {
-    position: absolute;
-    width: 90%;
-    height: 50%;
-    opacity: .9;
-    background-color: var(--darkgray);
-    border-radius: 25px;
-    box-shadow: 0 0 10px var(--white);
-    z-index: -99;
+    left: -15rem;
+    width: 35rem;
+    z-index: 2;
+}
+
+.svg3 {
+    right: 2rem;
+    top: -1rem;
+    width: 20rem;
+    z-index: -98;
+}
+
+.svg4 {
+    top: 21rem;
+    width: 27rem;
+    z-index: 3;
 }
 
 .main-section {
@@ -94,6 +111,7 @@ hr {
     border-radius: 15px;
     margin: 5px;
     background-color: var(--gray-box);
+    z-index: 3;
 }
 
 .info-title {
@@ -119,6 +137,7 @@ hr {
 .buy-div {
     width: min(700px,95%);
     box-shadow: 0 0 10px 1px var(--white);
+    z-index: 1000;
 }
 
 .buy-section {
@@ -171,6 +190,10 @@ hr {
     }
 
     .svg2 {
+        width: 25rem;
+    }
+
+    .svg4 {
         display: none;
     }
 
@@ -190,10 +213,6 @@ hr {
         height: 3rem;
     }
 
-    .svg2 {
-        display: none;
-    }
-
     .image-section{
         width: 95%;
     }
@@ -208,10 +227,6 @@ hr {
 
     .info-box {
         font-size: .9em;
-    }
-
-    .info-box{
-        min-height: unset;
     }
 
     .buy-div{
