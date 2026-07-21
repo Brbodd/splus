@@ -1,9 +1,3 @@
-:root {
-    --white: rgb(255, 255, 255);
-    --black: rgb(0, 0, 0);
-    --darkgray: rgb(42, 42, 42);
-}
-
 .flex-center {
     display: flex;
     justify-content: center;
@@ -65,13 +59,13 @@
 .category h3,
 .category label,
 .category button {
-    font-family: Doran;
+    font-family: Doran, sans-serif;
     font-weight: 700;
     font-size: 1.3rem;
 }
 
 .category::placeholder {
-    font-family: Doran;
+    font-family: Doran, sans-serif;
     font-weight: 500;
     font-size: 1rem;
 }
@@ -92,7 +86,7 @@
 }
 
 .price-input {
-    font-family: Doran;
+    font-family: Doran, sans-serif;
     width: 100%;
     max-width: 160px;
 }
@@ -116,7 +110,7 @@
 }
 
 .sort-list {
-    font-family: Doran;
+    font-family: Doran, sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
     display: block;

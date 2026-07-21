@@ -22,7 +22,7 @@
 }
 
 .navigation a {
-    font-family: Doran;
+    font-family: Doran, sans-serif;
     font-weight: bold;
     color: var(--white);
     font-size: 1.6em;

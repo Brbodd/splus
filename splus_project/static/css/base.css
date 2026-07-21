@@ -82,6 +82,8 @@
     --gray-box: rgb(97, 97, 97);
     --darkgray: rgb(42, 42, 42);
     --white: rgb(255, 255, 255);
+    --green: rgb(0, 128, 0);
+    --blue: rgb(0, 0, 255);
 }
 
 *, *::before, *::after {
@@ -92,6 +94,8 @@ body {
     margin: 0;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--white);
+    background-image:  repeating-radial-gradient( circle at -5% 38%, transparent 0, var(--gray) 18px ), repeating-linear-gradient(var(--gray-box));
 }
 
 img, picture, video, canvas, svg {
@@ -101,10 +105,5 @@ img, picture, video, canvas, svg {
 
 button, input, select, textarea {
     font: inherit;
-}
-
-body {
-    background-color: var(--white);
-    background-image:  repeating-radial-gradient( circle at -5% 38%, transparent 0, var(--gray) 18px ), repeating-linear-gradient(var(--gray-box));
 }
 

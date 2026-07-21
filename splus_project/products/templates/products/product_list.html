@@ -38,9 +38,11 @@
                 <div class='flex-center'>
                     <h3 class='price-title'>قیمت</h3>
                     <div class='price-box'>
+                        <label>
                         <input
                             type="number"
                             name="min_price"
+                            id="min_price"
                             class='price-input'
                             placeholder="حداقل قیمت">
                         <input
@@ -67,8 +69,8 @@
         </div>
 
         <section class='product-section'>
-
-            <select class="sort-list" name="sort">
+            <label>
+            <select class="sort-list" name="sort" id="sort">
                 <option value="">مرتب سازی</option>
                 <option value="cheap">ارزان‌ترین</option>
                 <option value="expensive">گران‌ترین</option>
