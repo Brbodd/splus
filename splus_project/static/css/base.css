@@ -76,6 +76,13 @@
     font-display: swap;
 }
 
+:root {
+    --black: rgb(0, 0, 0);
+    --gray: rgb(128, 128, 128);
+    --gray-box: rgb(97, 97, 97);
+    --darkgray: rgb(42, 42, 42);
+    --white: rgb(255, 255, 255);
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -97,7 +104,7 @@ button, input, select, textarea {
 }
 
 body {
-    background-color: #E5E5F7;
-    background-image:  repeating-radial-gradient( circle at -5% 38%, transparent 0, #3e3e3e 18px ), repeating-linear-gradient(#727272);
+    background-color: var(--white);
+    background-image:  repeating-radial-gradient( circle at -5% 38%, transparent 0, var(--gray) 18px ), repeating-linear-gradient(var(--gray-box));
 }
 
