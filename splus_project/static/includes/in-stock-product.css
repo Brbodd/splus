@@ -1,6 +1,7 @@
 :root {
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
+    --gray: rgb(128, 128, 128);
     --darkgray: rgb(42, 42, 42);
 }
 
@@ -33,37 +34,37 @@
     height: 400px;
     margin: 15px;
     box-shadow: 5px 5px 0 var(--darkgray);
+}
 
-    a {
-        font-family: Doran, sans-serif;
-        font-weight: 600;
-        font-size: 1.2rem;
-        text-decoration: none;
-        color: var(--black);
-    }
+.product-element a {
+    font-family: Doran, sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--black);
+}
 
-    h2 {
-        font-family: Doran, sans-serif;
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-        color: var(--black);
-        padding-top: 5%;
-        border-top: 3px solid var(--black);
-    }
+.product-name {
+    font-family: Doran, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--black);
+    padding-top: 5%;
+    border-top: 3px solid var(--black);
+}
 
-    h3 {
-        font-family: monospace;
-        text-align: right;
-        margin-right: 7%;
-        font-size: 1rem;
-        color: var(--gray);
-        margin-top: 0; 
-    }
+.product-code {
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--black);
+    background-color: var(--gray);
+    border-radius: 30px;
+    margin-top: 0;
+    width: 50%;
+}
 
-    img {
-        padding-block: 10%;
-    }
-
+.product-element img {
+    padding-block: 10%;
 }
 
 .product-element:hover {
