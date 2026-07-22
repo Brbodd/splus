@@ -1,0 +1,46 @@
+:root {
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+    --gray: rgb(128, 128, 128);
+    --darkgray: rgb(42, 42, 42);
+}
+
+.about-section {
+    background-color: var(--black);
+}
+
+.about-desc {
+    font-family: Doran, sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: var(--white);
+}
+
+.about-title {
+    font-family: Doran, sans-serif;
+    font-weight: 900;
+    color: var(--white);
+    margin-right: 50px;
+    padding-top: 20px;
+}
+
+.socials {
+    text-align: center;
+}
+
+.about-link {
+    margin: 2%;
+}
+
+.about-link a {
+    font-family: Doran, sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--white);
+}
+
+
