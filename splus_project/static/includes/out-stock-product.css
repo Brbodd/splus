@@ -28,7 +28,7 @@
     background-color: var(--white);
     text-align: center;
     border: 2px solid var(--black);
-    border-radius: 15px;
+    border-radius: 25px 75px 25px 25px;
     width: 220px;
     height: 400px;
     margin: 15px;
@@ -75,18 +75,18 @@
     box-shadow: 0 0 10px 10px rgb(0, 49, 0);
 }
 
-.out-product {
+.out-product:not(.out-of-stock-tag) {
     opacity: .5;
     pointer-events: none;
+}
 
-    a, h2 {
-        color: var(--gray) !important;
-    }
+.out-product a, h2 {
+    color: var(--gray);
+}
 
-    img {
-        filter: grayscale(100%) brightness(85%);
-        opacity: .6;
-    }
+.out-product img {
+    filter: grayscale(100%) brightness(85%);
+    opacity: .6;
 }
 
 .out-of-stock-tag {
@@ -95,10 +95,10 @@
     top: 5px;
     right: 5px;
     border: 1px solid black;
-    box-shadow: 1px 1px 1px var(--black);
+    box-shadow: 2px 2px 1px var(--black);
     font-size: 1rem;
     padding: 5px;
-    border-radius: 30px;
+    border-radius: 30px 10px 10px 30px;
     background: var(--gray);
     color: white;
     font-weight: bold;

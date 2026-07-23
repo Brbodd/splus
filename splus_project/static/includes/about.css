@@ -5,10 +5,6 @@
     --darkgray: rgb(42, 42, 42);
 }
 
-.icon {
-    color: white;
-}
-
 .about-section {
     background-color: var(--black);
 }
@@ -31,11 +27,8 @@
     padding-top: 20px;
 }
 
+.about-link,
 .socials {
-    text-align: center;
-}
-
-.about-link {
     margin: 2%;
 }
 
