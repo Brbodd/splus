@@ -28,7 +28,7 @@
     background-color: var(--white);
     text-align: center;
     border: 2px solid var(--black);
-    border-radius: 25px 75px 25px 25px;
+    border-radius: 25px;
     width: 220px;
     height: 400px;
     margin: 15px;

@@ -3,6 +3,8 @@
     --white: rgb(255, 255, 255);
     --gray: rgb(128, 128, 128);
     --darkgray: rgb(42, 42, 42);
+    --instock-green: #258751;
+    --green-hover: rgb(0, 49, 0);
 }
 
 .flex-center {
@@ -68,8 +70,8 @@
 }
 
 .product-element:hover {
-    border: 2px solid rgb(0, 49, 0);
-    box-shadow: 0 0 10px 10px rgb(0, 49, 0);
+    border: 2px solid var(--green-hover);
+    box-shadow: 0 0 5px 5px var(--green-hover) !important;
 }
 
 .product-img {
@@ -83,7 +85,7 @@
     right: 5px;
     border: 1px solid black;
     box-shadow: 2px 2px 1px var(--black);
-    background-color: #28a745;
+    background-color: var(--instock-green);
     font-size: 1rem;
     padding: 4px;
     border-radius: 30px 10px 10px 30px;
