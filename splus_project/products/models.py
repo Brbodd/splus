@@ -7,6 +7,7 @@ class Brand(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
+    code = models.CharField(max_length=50)
 
     brand = models.ForeignKey(
         Brand,
