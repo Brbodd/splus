@@ -95,7 +95,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: var(--white);
-    background-image:  repeating-radial-gradient( circle at -5% 38%, transparent 0, var(--gray) 18px ), repeating-linear-gradient(var(--gray-box));
+    background-image:  repeating-radial-gradient( circle at -5% 38%, transparent 0,rgb(79, 78, 78) 25px ), repeating-linear-gradient(rgb(69, 69, 70));
 }
 
 img, picture, video, canvas, svg {

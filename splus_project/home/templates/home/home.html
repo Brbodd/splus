@@ -13,9 +13,13 @@
 
 {% block content %}
 
+    {% comment %} <div class='no-background'>
+        <img src='{% static "images/01 copy.jpg" %}' alt='' style='width: min-content; margin-bottom: 0;'>
+    </div> {% endcomment %}
+
     <div class='best-selling-section flex-center center-div'>
         <img class='product-img-sample no-background' src="https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png" alt=''>
-        <div class='center-div no-background'>
+        <div class='center-div no-background' style='margin-block: 10%;'>
             <h2 class='best-selling-title flex-center no-background'> پرفروش ترین ساعت ها </h2>
             <div class='best-selling flex-center no-background'>
                 <div class='product-box'>
@@ -37,11 +41,9 @@
         </div>
     </div>
 
-    <div class='product-title-section flex-center center-div no-background'>
-        <h2 class='product-title'> محصولات </h2>   
-    </div>
     
     <div class='product-section flex-center'>
+        <h2 class='product-title'> محصولات </h2>
         {% for product in products %}
             {% if product.quantity > 0 %}
                 {% include "includes/in-stock-product.html" with product=product %}
@@ -55,24 +57,6 @@
         <a class='all-product-btn' href='{% url "product-list" %}'> تمامی محصولات </a>
     </div>
 
-    {% comment %} <div class='about-section'>
-        <h1 class='about-title no-background'>درباره سیکوپلاس</h1>
-        <p class='about-desc no-background'>در سیکو پلاس، ما به ارائه مجموعه‌ای استثنایی از ساعت‌های سیکو که ظرافت بی‌انتها را با مهندسی دقیق ترکیب می‌کنند، متعهد هستیم. مجموعه ما از طرح‌های کلاسیک تا جدیدترین نوآوری‌ها را شامل می‌شود و تضمین می‌کند که هر علاقه‌مند به ساعت می‌تواند ساعت ایده‌آل خود را پیدا کند. ما نه تنها به ارائه محصولات، بلکه به ارائه تجربه، با خدمات شخصی‌سازی شده و مشاوره تخصصی برای راهنمایی شما در انتخاب ساعت مناسب اعتقاد داریم. هر ساعت سیکو در فروشگاه ما گواهی بر میراث کیفیت و مهارت این برند است. با سیکو پلاس، ساعت بی‌نظیری را کشف کنید که در هر لحظه از زندگی شما را همراهی کند.</p>
-        <div class='socials no-background'>
-            <div class='about-link no-background'>
-                <a class='no-background' href=''>info@seikopluswatch.com</a>
-            </div>
-            <div class='about-link no-background'>
-                <a class='no-background' href=''>Whatsapp: 099000000</a>
-            </div>
-            <div class='about-link no-background'>
-                <a class='no-background' href=''>Telegram: 0999292392</a>
-            </div>
-            <div class='about-link no-background'>
-                <a class='no-background' href=''>Instagram: seikoplus_official</a>
-            </div>
-        </div>
-    </div> {% endcomment %}
 {% endblock content %}
 
 

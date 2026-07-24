@@ -15,7 +15,7 @@
 }
 
 .img-shadow {
-    filter: drop-shadow(3px 3px 0 rgba(0,0,0))
+    filter: drop-shadow(3px 3px 0 var(--black))
 }
 
 .center-div {
@@ -71,8 +71,8 @@
 }
 
 .product-element:hover {
-    border: 2px solid rgb(0, 49, 0);
-    box-shadow: 0 0 10px 10px rgb(0, 49, 0);
+    border: transparent !important;
+    box-shadow: 0 0 5px 5px var(--gray) !important;
 }
 
 .out-product:not(.out-of-stock-tag) {
@@ -94,12 +94,12 @@
     position: absolute;
     top: 5px;
     right: 5px;
-    border: 1px solid black;
+    border: 1px solid var(--black);
     box-shadow: 2px 2px 1px var(--black);
     font-size: 1rem;
     padding: 5px;
     border-radius: 30px 10px 10px 30px;
     background: var(--gray);
-    color: white;
+    color: var(--white);
     font-weight: bold;
 }

@@ -26,13 +26,7 @@ def index(request):
          "code": "PH-1054",
          "price": "۱۵.۰۰۰.۰۰۰",
          "quantity": 1,
-         "slug": "seiko__ph_1054"},
-        {"img": "https://www.seikopluswatch.com/wp-content/uploads/2024/08/seikoplus.png",
-         "name": "سیکو پلاس مردانه و زنانه",
-         "code": "PH-1055",
-         "price": "۹.۸۰۷.۰۰۰",
-         "quantity": 0,
-         "slug": "seiko__ph_1055"}
+         "slug": "seiko__ph_1054"}
     ]
     
     return render(request, 'home/home.html',
