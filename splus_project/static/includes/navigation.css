@@ -75,7 +75,7 @@
 }
 
 .best-selling-section {
-    background-color: var(--darkgray);
+    background: linear-gradient(var(--darkgray), var(--gray));
     height: 400px;
     border-top: 0;
     border-radius: 0 0 120% 0;

@@ -63,11 +63,8 @@
 }
 
 .product-element img {
-    padding-block: 10%;
-}
-
-.product-img {
     padding-top: 20%;
+    padding-block: 10%;
 }
 
 .product-element:hover {

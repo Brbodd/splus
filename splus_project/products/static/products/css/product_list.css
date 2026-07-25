@@ -6,10 +6,10 @@
 
 .circle {
     position: absolute;
-    background-color: var(--darkgray);
+    background-color: var(--white);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    opacity: .2;
+    opacity: .3;
     box-shadow: inset 0 0 100px 1px var(--black);
 }
 
