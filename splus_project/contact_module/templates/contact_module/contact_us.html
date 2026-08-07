@@ -15,7 +15,22 @@
 
 {% block content %}
     <div class='main-div'>
-        <form action='' method='POST'>
+        <form action='{% url "contact-us" %}' method='POST'>
+            {% csrf_token %}
+
+            
+            {% for field in contact_form %}
+                <div>
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {{ field.error_messsages }}
+                </div>
+            {% endfor %}
+
+            <button action='{% url "contact-us" %}' type='submit'>
+                ارسال
+            </button>
+                
         </form>
     </div>
 {% endblock content %}
