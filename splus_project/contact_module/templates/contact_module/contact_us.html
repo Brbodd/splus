@@ -19,7 +19,7 @@
             {% csrf_token %}
 
             
-            {% for field in contact_form %}
+            {% for field in form %}
                 <div>
                     {{ field.label_tag }}
                     {{ field }}
