@@ -1,5 +1,5 @@
 from django.views.generic import ListView, DetailView
-from .models import Product, ProductCategory
+from .models import Product
 
 class ProductListView(ListView):
     template_name = 'products/product_list.html'
