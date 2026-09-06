@@ -9,8 +9,6 @@ class ProductListView(ListView):
     def get_context_data(self, **kwargs):
         return super().get_context_data(**kwargs)
 
-
-
 class ProductDetailView(DetailView):
     template_name = 'products/product_detail.html'
     model = Product
