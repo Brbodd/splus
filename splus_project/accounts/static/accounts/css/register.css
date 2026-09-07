@@ -1,0 +1,50 @@
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid dimgray;
+    border-radius: 10px;
+    background-color: rgb(211 211 211 / 0.3);
+    box-shadow: 0 0 5px 1px dimgray, inset 0 0 40px 20px #3d3d3d;
+    margin: 2%;
+}
+
+.form-control {
+    font-family: Doran, sans-serif;
+    font-weight: 700;
+}
+
+.form-group {
+    background-color: gray;
+    border: 1px solid dimgray;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px #3d3d3d, inset 0 0 10px 5px #3d3d3d;
+    padding: 5%;
+    margin: 5%;
+    width: clamp(15rem, 40vw, 20rem);
+}
+
+.form-group label {
+    color: black;
+}
+
+.form-group input {
+    color: black;
+    width: 100%;
+}
+
+.btn-section {
+    grid-column: 1 / -1;
+    width: 100%;
+    text-align: center;
+}
+
+.register-btn {
+    font-size: 1.5em;
+    width: clamp(15rem, 30vw, 20rem);
+    margin: 5%;
+    background-color: #254031;
+    border: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px darkgreen, inset 0 0 5px 2px darkgreen;
+    color: white;
+}

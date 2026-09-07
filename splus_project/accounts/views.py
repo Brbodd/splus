@@ -63,7 +63,7 @@ class RegisterView(View):
                 # ورود خودکار کاربر
                 auth_login(request, user)
 
-                return redirect('')
+                return redirect('home')
 
         context = {
             'register_form': register_form

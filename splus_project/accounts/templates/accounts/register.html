@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_title %}
+    ثبت نام
+{% endblock page_title %}
+
+
+{% block header_references %}
+    <link rel="stylesheet" href="{% static 'accounts/css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'includes/about.css' %}">
+{% endblock header_references %}
+
+
+{% block content %}
+
+    <div class="form-control flex-center">
+
+        <form action="{% url 'register' %}" method="POST" class="form">
+
+            {% csrf_token %}
+
+            {{ register_form.non_field_errors }}
+
+            <div class="form-group">
+
+                {{ register_form.first_name.label_tag }}
+                <hr>
+                {{ register_form.first_name }}
+                {{ register_form.first_name.errors }}
+
+            </div>
+
+
+            <div class="form-group">
+
+                {{ register_form.last_name.label_tag }}
+                <hr>
+                {{ register_form.last_name }}
+                {{ register_form.last_name.errors }}
+
+            </div>
+
+
+            <div class="form-group">
+
+                {{ register_form.phone_number.label_tag }}
+                <hr>
+                {{ register_form.phone_number }}
+                {{ register_form.phone_number.errors }}
+
+            </div>
+
+
+            <div class="form-group">
+
+                {{ register_form.email.label_tag }}
+                <hr>
+                {{ register_form.email }}
+                {{ register_form.email.errors }}
+
+            </div>
+
+
+            <div class="form-group">
+
+                {{ register_form.password.label_tag }}
+                <hr>
+                {{ register_form.password }}
+                {{ register_form.password.errors }}
+
+            </div>
+
+
+            <div class="form-group">
+
+                {{ register_form.confirm_password.label_tag }}
+                <hr>
+                {{ register_form.confirm_password }}
+                {{ register_form.confirm_password.errors }}
+
+            </div>
+
+
+            <div class="form-group" dir="rtl">
+
+                {{ register_form.accept_terms.label_tag }}
+                {{ register_form.accept_terms }}
+                {{ register_form.accept_terms.errors }}
+
+            </div>
+
+            <div></div>
+
+            <div class="btn-section">
+
+                <button type="submit" class="register-btn">
+                    ثبت نام
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+{% endblock content %}
