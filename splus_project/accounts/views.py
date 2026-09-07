@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth import login as auth_login
 
-from .forms import RegisterForm
+from .forms import RegisterForm, LoginForm
 from .models import User
 
 
@@ -15,6 +15,52 @@ def logout(request):
 
 def profile(request):
     return render(request, 'accounts/profile.html')
+
+class LoginView(View):
+    def get(self, request):
+        login_form = LoginForm()
+
+        context = {
+            'login_form': login_form
+        }
+
+        return render(
+            request,
+            'accounts/login.html',
+            context
+        )
+
+    def post(self, request):
+        login_form = LoginForm(request.POST)
+
+        if login_form.is_valid():
+
+            phone_number = login_form.cleaned_data.get('phone_number')
+
+            user : User = User.objects.get(phone_number=phone_number)
+
+            if not user:
+
+                login_form.add_error(None, 'لطفا ابتدا ثبت نام کنید.')
+
+                return redirect('register')
+
+            else:
+
+                login(request)
+
+                return redirect('home')
+
+        context = {
+            'login_form': login_form
+        }
+
+        return render(
+            request,
+            'accounts/login.html',
+            context
+        )
+
 
 
 class RegisterView(View):

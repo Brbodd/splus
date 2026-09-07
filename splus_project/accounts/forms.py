@@ -98,7 +98,7 @@ class RegisterForm(forms.Form):
     def clean_phone_number(self):
         phone = self.cleaned_data["phone_number"]
 
-        if not phone.startswith("09"):
+        if not phone.startswith("09") or not phone.startswith("۰۹"):
             raise forms.ValidationError(
                 "شماره موبایل باید با 09 شروع شود."
             )
@@ -123,3 +123,29 @@ class RegisterForm(forms.Form):
                 )
 
         return cleaned_data
+
+
+class LoginForm(forms.Form):
+
+    phone_number = forms.CharField(
+        label="شماره موبایل",
+        required=True,
+        validators=[
+            validators.MinLengthValidator(
+                11,
+                message="شماره موبایل باید ۱۱ رقم باشد."
+            ),
+            validators.MaxLengthValidator(
+                11,
+                message="شماره موبایل باید ۱۱ رقم باشد."
+            ),
+        ],
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "09123456789",
+                "class": "form-control",
+                "autocomplete": "tel",
+                "inputmode": "numeric",
+            }
+        )
+    )
