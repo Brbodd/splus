@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils.text import slugify
 from django.urls import reverse
 
 
@@ -57,7 +56,6 @@ class Product(models.Model):
     )
 
     image_src = models.CharField(
-        default='',
         max_length=350,
         verbose_name='آدرس عکس'
     )
@@ -65,10 +63,6 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'محصول'
         verbose_name_plural = 'محصولات'
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('product-detail', args=[self.slug])

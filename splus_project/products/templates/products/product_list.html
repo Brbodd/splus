@@ -17,79 +17,125 @@
         <div class='svg3 circle'></div>
         
         <div class="category">
+
             <form class="category-form" method="get">
+
                 <div class='flex-center'>
+
                     <h3 class='type-title'>چه نوعی باشه؟</h3>
+
                     <label class='check-box'>
                         <input type="checkbox" name="category" value="2">
                         مردانه
                     </label>
+
                     <label class='check-box'>
+
                         <input type="checkbox" name="category" value="1">
                         زنانه
                     </label>
+
                     <label class='check-box'>
+
                         <input type="checkbox" name="category" value="3">
                         ست
                     </label>
+
                 </div>
 
                 <div class='line'></div>
 
                 <div class='flex-center'>
+
                     <h3 class='price-title'>قیمت</h3>
+
                     <div class='price-box'>
+
                         <label>
-                        <input
-                            type="number"
-                            name="min_price"
-                            id="min_price"
-                            class='price-input'
-                            placeholder="حداقل قیمت">
-                        <input
-                            type="number"
-                            name="max_price"
-                            class='price-input'
-                            placeholder="حداکثر قیمت">
+
+                            <input
+                                type="number"
+                                name="min_price"
+                                id="min_price"
+                                class='price-input'
+                                placeholder="حداقل قیمت">
+
+                            <input
+                                type="number"
+                                name="max_price"
+                                class='price-input'
+                                placeholder="حداکثر قیمت">
+
+                        </label>
+
                     </div>
+
                 </div>
 
                 <div class='line'></div>
                 
                 <h3 class='inventory-title'>موجودی</h3>
+
                 <label>
+
                     <input type="checkbox" name="in_stock">
                     فقط کالاهای موجود
                 </label>
+
                 <div class='flex-center'>
+
                     <button class="filter-btn" type="submit">
                         اعمال فیلتر
                     </button>
+
                 </div>
+
             </form>
+
         </div>
 
         <section class='product-section'>
+
             <label>
-            <select class="sort-list" name="sort" id="sort">
-                <option value="">مرتب سازی</option>
-                <option value="cheap">ارزان‌ترین</option>
-                <option value="expensive">گران‌ترین</option>
-                <option value="newest">جدیدترین</option>
-            </select>
+
+                <select class="sort-list" name="sort" id="sort">
+
+                    <option value="">مرتب سازی</option>
+
+                    <option value="cheap">ارزان‌ترین</option>
+
+                    <option value="expensive">گران‌ترین</option>
+
+                    <option value="newest">جدیدترین</option>
+
+                </select>
+
+            </label>
 
             <div class='products'>
+
                 {% for product in products %}
+
                     {% if product.quantity > 0 %}
+
                         {% include "includes/in-stock-product.html" with product=product %}
+
                     {% else %}
+
                         {% include "includes/out-stock-product.html" with product=product %}
+
                     {% endif %}
+
                 {% empty %}
+
                     <p>محصولی یافت نشد.</p>
+
                 {% endfor %}
+
             </div>
+
         </section>
+
     </div>
 
 {% endblock content %}

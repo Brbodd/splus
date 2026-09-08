@@ -1,12 +1,22 @@
 {% load static %}
+
 <div class='product-element flex-center'>
     <a class='no-background' href="{{ product.get_absolute_url }}">
         <p class='in-stock-tag'> موجود </p>
-        <img class='product-img img-shadow no-background center-div' src="{{ product.img }}" alt=''>
-        <h2 class='product-name no-background'> {{ product.name }} </h2>
+
+        <img
+            class='product-img img-shadow no-background center-div'
+            src="{{ product.image_src }}"
+            alt=''>
+
+        <h2 class='product-name no-background'>
+            {{ product.name }}
+        </h2>
+
         <div class='flex-center'>
-            <h3 class='product-code'> {{ product.code}} </h3>
+            <h3 class='product-code'>{{ product.code }}</h3>
         </div>
+
         {{ product.price }} تومان
     </a>
 </div>
