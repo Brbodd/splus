@@ -1,16 +1,11 @@
-from django.contrib.auth.base_user import AbstractBaseUser
 from django.shortcuts import render, redirect
 from django.views import View
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.contrib.auth import login as auth_login
 
 from .forms import RegisterForm, LoginForm
 from .models import User
 
-
-
-def profile(request):
-    return render(request, 'accounts/profile.html')
 
 class ProfileView(View):
     def get(self, request):

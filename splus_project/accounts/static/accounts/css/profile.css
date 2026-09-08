@@ -22,6 +22,17 @@
     margin: 10px;
 }
 
+.logout-link {
+    font-family: Doran, sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: black;
+    padding: 1%;
+    border: 2px solid gray;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px dimgray, inset 0 0 10px 5px gray;
+}
+
 hr {
     color: black;
 }
