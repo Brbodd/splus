@@ -1,5 +1,7 @@
+from django.contrib.auth.base_user import AbstractBaseUser
 from django.shortcuts import render, redirect
 from django.views import View
+from django.contrib.auth import login
 from django.contrib.auth import login as auth_login
 
 from .forms import RegisterForm, LoginForm
@@ -7,14 +9,30 @@ from .models import User
 
 
 
-def login(request):
-    return render(request, 'accounts/login.html')
-
-def logout(request):
-    return render(request, 'accounts/logout.html')
-
 def profile(request):
     return render(request, 'accounts/profile.html')
+
+class ProfileView(View):
+    def get(self, request):
+
+        if request.user.is_authenticated:
+
+            user = User.objects.get(id=request.user.id)
+
+            content = {
+                'user': user,
+            }
+
+            return render(
+                request,
+                'accounts/profile.html',
+                content
+            )
+
+        else:
+
+            return redirect('login')
+
 
 class LoginView(View):
     def get(self, request):
@@ -37,19 +55,29 @@ class LoginView(View):
 
             phone_number = login_form.cleaned_data.get('phone_number')
 
-            user : User = User.objects.get(phone_number=phone_number)
+            try:
 
-            if not user:
+                user = User.objects.get(phone_number=phone_number)
 
-                login_form.add_error(None, 'لطفا ابتدا ثبت نام کنید.')
+            except User.DoesNotExist:
 
-                return redirect('register')
+                login_form.add_error(
+                    None,
+                    'لطفا ابتدا ثبت نام کنید.'
+                )
 
-            else:
+                return render(
+                    request,
+                    'accounts/login.html',
+                    {
+                        'login_form': login_form
+                    }
+                )
 
-                login(request)
+            login(request, user)
 
-                return redirect('home')
+            return redirect('home')
+
 
         context = {
             'login_form': login_form
@@ -60,7 +88,6 @@ class LoginView(View):
             'accounts/login.html',
             context
         )
-
 
 
 class RegisterView(View):
@@ -120,3 +147,11 @@ class RegisterView(View):
             'accounts/register.html',
             context
         )
+
+
+class LogoutView(View):
+    def post(self, request):
+
+        logout(request)
+
+        return redirect('login')

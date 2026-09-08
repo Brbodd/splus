@@ -48,3 +48,9 @@
     box-shadow: 0 0 1px 1px darkgreen, inset 0 0 5px 2px darkgreen;
     color: white;
 }
+
+.register-link {
+    font-size: 1.2em;
+    color: darkblue;
+    padding: 2%;
+}

@@ -1,0 +1,27 @@
+.info-section {
+    width: clamp(50%, 65vw,70%);
+    background-color: darkgrey;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin: 2%;
+}
+
+.info-box {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+}
+
+.info-text {
+    font-family: Doran, sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px dimgray, inset 0 0 10px 5px gray;
+    margin: 10px;
+}
+
+hr {
+    color: black;
+}

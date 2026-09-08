@@ -1,1 +1,70 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+    حساب کاربری من
+{% endblock page_title %}
+
+{% block header_references %}
+    <link rel="stylesheet" href="{% static 'accounts/css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'includes/about.css' %}">
+{% endblock header_references %}
+
+{% block content %}
+
+    <div class="flex-center">
+
+        <div class="info-section">
+
+            <div class="info-box">
+
+                <div class="info-text">
+                    <p class="flex-center">
+                        نام:
+                    </p>
+                </div>
+
+                <div class="info-text flex-center">
+                    {{ user.first_name }}
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="info-box">
+
+                <div class="info-text">
+                    <p class="flex-center">
+                        نام خانوادگی:
+                    </p>
+                </div>
+
+                <div class="info-text flex-center">
+                    {{ user.last_name }}
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="info-box">
+
+                <div class="info-text">
+                    <p class="flex-center">
+                        آدرس ایمیل:
+                    </p>
+                </div>
+
+                <div class="info-text flex-center">
+                    {{ user.email }}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+{% endblock content %}
