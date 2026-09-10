@@ -8,30 +8,44 @@
 
 
 {% block header_references %}
-    <link rel='stylesheet' href='{% static "contact_us.css" %}'>
+    <link rel='stylesheet' href='{% static "contact_module/css/contact_us.css" %}'>
     <link rel='stylesheet' href='{% static "includes/about.css" %}'>
 {% endblock header_references %}
     
 
 {% block content %}
-    <div class='main-div'>
-        <form action='{% url "contact-us" %}' method='POST'>
-            {% csrf_token %}
+    <div class="flex-center">
 
-            
-            {% for field in form %}
-                <div>
-                    {{ field.label_tag }}
-                    {{ field }}
-                    {{ field.error_messsages }}
+        <div class='main-div'>
+
+            <form action='{% url "contact-us" %}' method='POST' class="form-control">
+                {% csrf_token %}
+
+
+                {% for field in form %}
+
+                    <div class="form-group">
+
+                        {{ field.label_tag }}
+                        {{ field }}
+                        {{ field.error_messsages }}
+
+                    </div>
+
+                {% endfor %}
+
+                <div class="flex-center">
+
+                    <button action='{% url "contact-us" %}' type='submit' class="send-btn">
+                        ارسال
+                    </button>
+
                 </div>
-            {% endfor %}
 
-            <button action='{% url "contact-us" %}' type='submit'>
-                ارسال
-            </button>
-                
-        </form>
+            </form>
+
+        </div>
+
     </div>
 {% endblock content %}
     

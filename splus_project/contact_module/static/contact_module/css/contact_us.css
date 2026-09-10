@@ -1,0 +1,41 @@
+.main-div {
+    background-color: gray;
+    border: 1px solid dimgray;
+    border-radius: 10px;
+    background-color: rgb(211 211 211 / 0.3);
+    box-shadow: 0 0 5px 1px dimgray, inset 0 0 40px 20px #3d3d3d;
+    margin: 2%;
+}
+
+.form-control {
+    font-family: Doran, sans-serif;
+    font-weight: 700;
+    padding: 2%;
+    margin: 2%;
+}
+
+.form-group {
+    padding: 2%;
+}
+
+.form-control label {
+    color: black;
+    margin: 2%;
+}
+
+.form-control input {
+    color: black;
+    width: 100%;
+}
+
+
+.send-btn {
+    font-size: 1.5em;
+    width: clamp(10rem, 30vw, 15rem);
+    margin: 5%;
+    background-color: #254031;
+    border: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px darkgreen, inset 0 0 5px 2px darkgreen;
+    color: white;
+}
