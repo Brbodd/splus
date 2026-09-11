@@ -25,8 +25,30 @@
         <i class='icon fa-solid fa-cart-shopping fa-3x'></i>
     </div>
     <div class='profile-nav no-background'>
-        <span class='profile-text'>پروفایل</span>
-        <i class="icon fa-solid fa-id-card fa-3x"></i>
+
+        {% if request.user.is_authenticated %}
+
+            <a href="{% url 'profile'%}">
+
+                <i class="icon fa-solid fa-id-card fa-3x"></i>
+
+                <p class="profile-text"> پروفایل </p>
+
+            </a>
+
+        {% else %}
+
+            <a href="{% url 'login'%}">
+
+
+                <i class="icon fa-solid fa-right-to-bracket fa-3x"></i>
+
+                <p class="profile-text"> ورود </p>
+
+            </a>
+
+        {% endif %}
+
     </div>
 </div>
 {% endblock content %}

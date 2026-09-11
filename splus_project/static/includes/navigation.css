@@ -22,18 +22,6 @@
     text-shadow: 3px 3px 3px var(--gray);
 }
 
-
-.cart-text, 
-.profile-text {
-    transition: .7s;
-    opacity: 0;
-}
-
-.shopping-cart-nav:hover .cart-text,
-.profile-nav:hover .profile-text {
-    opacity: 1;
-}
-
 .shopping-cart-nav:hover .icon,
 .profile-nav:hover .icon {
     opacity: 0;
@@ -68,6 +56,18 @@
     text-shadow: 2px 2px 2px var(--gray);
 }
 
+.cart-text,
+.profile-text {
+    transition: .7s;
+    opacity: 0;
+    font-size: 25px;
+}
+
+.shopping-cart-nav:hover .cart-text,
+.profile-nav:hover .profile-text {
+    opacity: 1;
+}
+
 .empty-space {
     color: var(--black);
     width: 50rem;
@@ -87,6 +87,15 @@
     }
 
     .navigation a {
-        font-size: 1em;
+        font-size: 1.1em;
     }
+
+
+    .cart-text,
+    .profile-text {
+        transition: .7s;
+        opacity: 0;
+        font-size: 20px;
+    }
+
 }
