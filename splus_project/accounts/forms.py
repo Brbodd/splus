@@ -98,7 +98,7 @@ class RegisterForm(forms.Form):
     def clean_phone_number(self):
         phone = self.cleaned_data["phone_number"]
 
-        if not phone.startswith("09") or not phone.startswith("۰۹"):
+        if not phone.startswith("09"):
             raise forms.ValidationError(
                 "شماره موبایل باید با 09 شروع شود."
             )
